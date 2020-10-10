@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web components</title>
+  <link rel="stylesheet" href="./style/style.scss">
+</head>
+<body>
+  <div class="quotes">
+    <for-each class="loop-one" keys='["name", "title", "quote"]'>
+      <template>
+        <div class="quote">
+          <quote-card image-text=" {{ index }}. {{ prop[name] }}">
+            <slot slot="name">{{ prop[name] }}</slot>
+            <slot slot="title">{{ prop[title] }}</slot>
+            <slot slot="quote">{{ prop[quote] }}</slot>
+          </quote-card>
+        </div>
+      </template>
+    </for-each>
+  </div>
+  <script src="src/web-components.ts"></script>
+  <script src="src/index.ts"></script>
+</body>
+</html>
