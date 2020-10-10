@@ -2,7 +2,6 @@
 
 Pack of web components, Parcel is used in development
 
-
 ### Components
 
 1.  **ForEach** - Adds option to create loops directly in html, copies templating similar to vue or svelte. Inside template tag variables are available inside double CurlyBraces with one space in between on each side {{ variable }}.<br/><br/>
