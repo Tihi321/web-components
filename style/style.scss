@@ -1,0 +1,10 @@
+.quotes {
+  max-width: 1080px;
+  margin: auto;
+  padding: 25px;
+
+  .render {
+    display:flex;
+    flex-wrap: wrap;
+  }
+}
