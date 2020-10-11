@@ -5,12 +5,17 @@ Pack of web components, Parcel is used in development
 
 ## Components
 
-1.  **ForEach** - Adds option to create loops directly in html, copies templating similar to vue or svelte. 
+1.  **ForEach** - Adds option to create loops directly in html, copies templating similar to vue or svelte. Inside template tag variables are available inside double CurlyBraces with one space in between on each side {{ variable }}.
 
-	*Element*<br/>
-  **`<for-each keys='["name", "title"]' props='[{"name": "Marko", "title": "Firefighter"},{"name": "Pero", "title": "Jongler"}]'>... {{ prop[name] }} {{ prop[title] }} {{ index }} ...</for-each>`**
+	*Element with Objects*<br/>
+  **`<for-each keys='["name", "title"]' props='[{"name": "Marko", "title": "Firefighter"},{"name": "Pero", "title": "Jongler"}]'>`**<br/>
+    **`<template>... {{ prop[name] }} {{ prop[title] }} {{ index }} ...</template>`**<br/>
+  **`</for-each>`**
 
-  **`<for-each props='["Marko", "Pero"]'>... {{ prop }} {{ index }} ...</for-each>`**
+	*Element with Strings or Number*<br/>
+  **`<for-each props='["Marko", "Pero"]'>`**<br/>
+    **`<template>... {{ prop }} {{ index }} ...</template>`**<br/>
+  **`</for-each>`**
 
 	*Attributes*<br/>
 	**props** - Properties for looping, can be array of objects, strings or numbers<br/>
