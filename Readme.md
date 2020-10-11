@@ -31,3 +31,14 @@ Pack of web components, Parcel is used in development
 
 	*Attributes*<br/>
 	**image-text** - text that goes over image <br/>
+	
+2.  **StylizedImage** - component accepts image source and effect attribute, and returns stylized image, with optional title in the middle.<br/><br/>
+
+	*Element*<br/>
+  **`<stylized-image src="" effect="vignette">`**<br/>
+  **`<slot slot="title">...</slot>`**<br/>
+  **`</stylized-image>`**<br/><br/>
+
+	*Attributes*<br/>
+	**src** - source/url of the image <br/>
+	**effect** - effect that needs to be applied, list of effects can be extended, at the moment there is chewie, empire, ingrid, nightwing, sepia, noire, frame and vignette effect<br/>
