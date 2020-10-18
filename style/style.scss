@@ -1,10 +1,17 @@
-.quotes {
+.container {
   max-width: 1080px;
   margin: auto;
   padding: 25px;
-
+  text-align: center;
+}
+.quotes {
   .render {
     display:flex;
     flex-wrap: wrap;
   }
+}
+
+.divider {
+  height: 200px;
+  background-color: #353535;
 }

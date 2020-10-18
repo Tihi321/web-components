@@ -7,8 +7,8 @@ type ElementSize = {
 }
 
 class StylizedImageComponent extends HTMLElement {
-  src: string;
-  effect: string;
+  src: string = "";
+  effect: string = "";
   imgElement: HTMLImageElement;
   stylizedImageContainer: HTMLElement | null = null;
 
@@ -23,11 +23,6 @@ class StylizedImageComponent extends HTMLElement {
 
     this.imgElement = new Image();
     this.setImageSizeCallback = this.setImageSizeCallback.bind(this);
-
-    this.src = this.getAttribute(Attributes.SOURCE) || '';
-    this.effect = this.getAttribute(Attributes.EFFECT) || '';
-
-    this.updateImageSize();
   }
 
   updateImageSize() {
@@ -49,6 +44,8 @@ class StylizedImageComponent extends HTMLElement {
       width: event.target?.width,
       height: event.target?.height
     };
+
+    this.imgElement.removeEventListener(Events.LOAD, this.setImageSizeCallback);
   }
 
   static get observedAttributes(): string[] {
@@ -96,10 +93,6 @@ class StylizedImageComponent extends HTMLElement {
 
   connectedCallback() {
     this.setEffect(this.effect); 
-  }
-
-  disconnectedCallback() {
-    this.imgElement.removeEventListener(Events.LOAD, this.setImageSizeCallback);
   }
 
   static register() {

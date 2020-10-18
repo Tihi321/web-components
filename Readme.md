@@ -30,7 +30,7 @@ Pack of web components, Parcel is used in development
   **`</quote-card>`**<br/><br/>
 
 	*Attributes*<br/>
-	**image-text** - text that goes over image <br/>
+	**image-text** - text that goes over image <br/><br/>
 	
 2.  **StylizedImage** - component accepts image source and effect attribute, and returns stylized image, with optional title in the middle.<br/><br/>
 
@@ -41,4 +41,12 @@ Pack of web components, Parcel is used in development
 
 	*Attributes*<br/>
 	**src** - source/url of the image <br/>
-	**effect** - effect that needs to be applied, list of effects can be extended, at the moment there is chewie, empire, ingrid, nightwing, sepia, noire, frame and vignette effect<br/>
+	**effect** - effect that needs to be applied, list of effects can be extended, at the moment there is chewie, empire, ingrid, nightwing, sepia, noire, frame and vignette effect<br/><br/>
+	
+2.  **LazyImage** - component accepts image source, and returns lazy loaded image that dynamically loads when user scrolls to 100px from the element top or bottom<br/><br/>
+
+	*Element*<br/>
+  **`<lazy-image src=""></lazy-image>`**<br/><br/>
+
+	*Attributes*<br/>
+	**src** - source/url of the image <br/>

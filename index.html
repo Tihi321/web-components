@@ -7,21 +7,35 @@
   <link rel="stylesheet" href="./style/style.scss">
 </head>
 <body>
-  <div class="quotes">
-    <for-each class="loop-one" keys='["name", "title", "quote"]'>
-      <template>
-        <div class="quote">
-          <quote-card image-text=" {{ index }}. {{ prop[name] }}">
-            <slot slot="name">{{ prop[name] }}</slot>
-            <slot slot="title">{{ prop[title] }}</slot>
-            <slot slot="quote">{{ prop[quote] }}</slot>
-          </quote-card>
-        </div>
-      </template>
-    </for-each>
-  </div>
   <div>
-    <stylized-image src="https://images.unsplash.com/photo-1602180140242-a1f27c60a667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80" effect="vignette" />
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, consequatur incidunt repudiandae autem eveniet itaque quas laboriosam iure dolore cumque obcaecati maiores aperiam accusantium odio? Obcaecati eum repellat earum commodi.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, consequatur incidunt repudiandae autem eveniet itaque quas laboriosam iure dolore cumque obcaecati maiores aperiam accusantium odio? Obcaecati eum repellat earum commodi.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, consequatur incidunt repudiandae autem eveniet itaque quas laboriosam iure dolore cumque obcaecati maiores aperiam accusantium odio? Obcaecati eum repellat earum commodi.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, consequatur incidunt repudiandae autem eveniet itaque quas laboriosam iure dolore cumque obcaecati maiores aperiam accusantium odio? Obcaecati eum repellat earum commodi.
+  </div>
+  <div class="divider"></div>
+  <div class="divider"></div>
+  <div class="container">
+    <div class="quotes">
+      <for-each class="loop-one" keys='["name", "title", "quote"]'>
+        <template>
+          <div class="quote">
+            <quote-card image-text=" {{ index }}. {{ prop[name] }}">
+              <slot slot="name">{{ prop[name] }}</slot>
+              <slot slot="title">{{ prop[title] }}</slot>
+              <slot slot="quote">{{ prop[quote] }}</slot>
+            </quote-card>
+          </div>
+        </template>
+      </for-each>
+    </div>
+    <div class="divider"></div>
+    <stylized-image src="https://images.unsplash.com/photo-1602180140242-a1f27c60a667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80" effect="vignette">
+    </stylized-image>
+    <div class="divider"></div>
+    <lazy-image src="https://images.unsplash.com/photo-1602180140242-a1f27c60a667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80">
+    </lazy-image>
+    <div class="divider"></div>
   </div>
   <script src="src/web-components.ts"></script>
   <script src="src/index.ts"></script>
